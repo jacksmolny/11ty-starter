@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  background-color: $black;
+  font-family: $mainFont;
+  font-weight: normal;
+  font-style: normal;
+
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+}

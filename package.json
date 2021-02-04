@@ -1,0 +1,40 @@
+{
+  "name": "11ty-starter",
+  "version": "1.0.0",
+  "description": "11ty starter",
+  "main": "index.js",
+  "scripts": {
+    "watch:eleventy": "eleventy --serve --port=3000",
+    "watch:gulp": "gulp dev",
+    "build:gulp": "gulp production",
+    "build:eleventy": "eleventy build",
+    "dev": "concurrently \"npm run build:gulp\" \"npm run watch:eleventy\" \"npm run watch:gulp\" ",
+    "build": "concurrently \"npm run build:eleventy\" \"npm run build:gulp\" "
+  },
+  "keywords": [
+    "11ty",
+    "11ty",
+    "starter"
+  ],
+  "author": "JackSmolny",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy-img": "^0.7.8",
+    "@jamshop/eleventy-plugin-svg": "^2.0.0",
+    "@quasibit/eleventy-plugin-sitemap": "^2.0.4",
+    "concurrently": "^5.3.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-uglify-es": "^2.0.0",
+    "html-minifier": "^4.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "prettier": "^2.2.1"
+  }
+}
