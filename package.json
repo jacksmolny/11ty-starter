@@ -9,7 +9,8 @@
     "build:gulp": "gulp production",
     "build:eleventy": "eleventy build",
     "dev": "concurrently \"npm run build:gulp\" \"npm run watch:eleventy\" \"npm run watch:gulp\" ",
-    "build": "concurrently \"npm run build:eleventy\" \"npm run build:gulp\" "
+    "build": "concurrently \"npm run pwaprebuild\" \"npm run build:eleventy\" \"npm run build:gulp\" ",
+    "pwaprebuild": "pwa-asset-generator \"./src/favicon.png\"  \"./src/images/favicon\" --path-override \"images/favicon\" --manifest \"./src/manifest.json\" --favicon --mstile --index \"./src/layouts/pwa.html\" --log false "
   },
   "keywords": [
     "11ty",
@@ -30,7 +31,8 @@
     "gulp-plumber": "^1.2.1",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
-    "html-minifier": "^4.0.0"
+    "html-minifier": "^4.0.0",
+    "pwa-asset-generator": "^4.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",

@@ -1,10 +1,12 @@
 ---
-layout: index.html
+layout: pwa.html
 permalink: index.html
 lang: en
-meta_title: meta title
-meta_description: meta description
-meta_keywords: meta keywords
+meta_title: Title
+meta_description: Description
+meta_keywords: Keywords
+css_file: css/index.css
+js_file: js/index.js
 ---
 
-{% image "placeholder-digital.png", "placeholder-digital" %} {% svg "arrow-left" %} {% include "index/section1.html" %}
+{{ index.title }} {% include "scenes/section.html" %} {% include "components/button.html" %} {% image "image-analysis.png", "placeholder-digital" %} {% svg "arrow-left" %}
